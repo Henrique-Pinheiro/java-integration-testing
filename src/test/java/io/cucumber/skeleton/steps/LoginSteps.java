@@ -42,4 +42,10 @@ public class LoginSteps {
     public void oUsuarioDeveSerConvivencia(String convivencia) {
         Assert.assertEquals(parseBoolean(convivencia), login.getConvivencia());
     }
+
+    @Dado("que eu esteja autenticado com o EC (.*), Usuário (.*), Senha (.*)")
+    public void queEuEstejaAutenticadoComOECEcUsuárioUserSenhaPass(String ec, String user, String pass) {
+        queEuInformeOECECOUsuárioUserEASenhaSenha(ec, user, pass);
+        euEnviarAResquisição();
+    }
 }
