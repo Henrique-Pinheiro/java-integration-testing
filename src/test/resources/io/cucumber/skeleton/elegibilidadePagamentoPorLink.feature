@@ -22,6 +22,3 @@ Funcionalidade: API - Eligibilidade do EC - Pagamento por Link
       | 2007700179 | 2007700179 | 654321    | 200    | não      |
 
 
-
-
-  
