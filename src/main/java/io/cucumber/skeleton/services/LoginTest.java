@@ -18,9 +18,13 @@ public class LoginTest {
     private String user = "";
     private String senha = "";
     private int status = 0;
-    private static String token = null;
+    private static String token = "";
     private String refreshToken = null;
     private Object convivencia = null;
+
+    public static String getInvalidToken() {
+        return token + "a";
+    }
 
 
     public void setEc(String ec) {

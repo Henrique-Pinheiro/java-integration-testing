@@ -48,4 +48,9 @@ public class LoginSteps {
         queEuInformeOECECOUsuárioUserEASenhaSenha(ec, user, pass);
         euEnviarAResquisição();
     }
+
+
+    @Dado("que eu não esteja autenticado")
+    public void queEuNãoEstejaAutenticado() {
+    }
 }

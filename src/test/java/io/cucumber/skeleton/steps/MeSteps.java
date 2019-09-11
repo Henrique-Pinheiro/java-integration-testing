@@ -1,16 +1,18 @@
 package io.cucumber.skeleton.steps;
 
+import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
+import io.cucumber.skeleton.services.LoginTest;
 import io.cucumber.skeleton.services.MeTest;
 import org.junit.Assert;
 
 public class MeSteps {
-    
+
     private MeTest meTest = new MeTest();
 
-    @Quando("eu enviar a requisção")
+    @Quando("eu enviar a requisição")
     public void euEnviarARequisção() {
         meTest.getMe();
     }
@@ -34,5 +36,15 @@ public class MeSteps {
     @E("receber o status (.*)")
     public void receberOStatusStatus(int status) {
         Assert.assertEquals(status, meTest.getStatus());
+    }
+
+    @E("o token esteja expirado")
+    public void oTokenEstejaExpirado() {
+       meTest.setInvalidToken(LoginTest.getInvalidToken());
+    }
+
+    @E("deve ser exibida a mensagem {string}")
+    public void entãoDeveSerExibidaAMensagem(String msg) {
+        Assert.assertEquals(msg, meTest.getMsg());
     }
 }
