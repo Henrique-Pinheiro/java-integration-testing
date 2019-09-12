@@ -1,8 +1,10 @@
 package io.cucumber.skeleton.steps;
 
+import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
+import io.cucumber.skeleton.services.LoginTest;
 import io.cucumber.skeleton.services.MerchantTest;
 import org.junit.Assert;
 
@@ -46,4 +48,16 @@ public class MerchantSteps {
         Assert.assertEquals(estado, merchantTest.getEstado());
         Assert.assertEquals(num, merchantTest.getNum());
     }
+
+    @E("o token deve estar expirado")
+    public void oTokenDeveEstarExpirado() {
+        merchantTest.setInvalidToken(LoginTest.getInvalidToken());
+    }
+
+    @Então("devera ser exibida a mensagem {string}")
+    public void deveraSerExibidaAMensagem(String msg) {
+        Assert.assertEquals(msg,merchantTest.getMsg());
+
+    }
+
 }

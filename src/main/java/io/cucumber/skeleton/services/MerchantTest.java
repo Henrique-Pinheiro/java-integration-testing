@@ -29,6 +29,7 @@ public class MerchantTest {
     private String estado;
     private String numero;
     private String invalidToken = "";
+    private String msg;
 
     public void getMerchant() {
         baseURI = ENDPOINT_GET_MERCHANT;
@@ -52,12 +53,17 @@ public class MerchantTest {
         bairro = json.get("addresses[0].neighborhood");
         estado = json.get("addresses[0].state");
         numero = json.get("addresses[0].number");
+        msg = json.get("message");
 
     }
 
 
     public int getStatus() {
         return status;
+    }
+    public String getMsg(){
+
+        return msg;
     }
 
     public String getNomeCompania() {
