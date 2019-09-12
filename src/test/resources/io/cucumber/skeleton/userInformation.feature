@@ -39,6 +39,3 @@ Funcionalidade: API - /me - Obtém as informações do usuário
     Exemplos:
       | status |
       | 400    |
-
-
-#      VC7wlbMO3LsDp8tjUaKRlayCeEXt1moKaRoKq3qDpYwDJvAz0e
