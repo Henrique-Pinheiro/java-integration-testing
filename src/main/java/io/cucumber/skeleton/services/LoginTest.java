@@ -26,6 +26,10 @@ public class LoginTest {
         return token + "a";
     }
 
+    public static void setToken(String token) {
+        LoginTest.token = token;
+    }
+
 
     public void setEc(String ec) {
         this.ec = ec;

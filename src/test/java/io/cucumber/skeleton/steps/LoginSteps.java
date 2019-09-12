@@ -52,5 +52,6 @@ public class LoginSteps {
 
     @Dado("que eu não esteja autenticado")
     public void queEuNãoEstejaAutenticado() {
+        LoginTest.setToken("");
     }
 }

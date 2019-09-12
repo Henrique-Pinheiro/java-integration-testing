@@ -30,7 +30,7 @@ public class MeTest {
     public void getMe() {
         baseURI = ENDPOINT_GET_ME;
         RequestSpecification request = given();
-        token = invalidToken.isEmpty() ? LoginTest.getToken() : invalidToken;
+        token = invalidToken.isEmpty() ? LoginTest.getToken() : invalidToken+"a";
         request.header("access_token", token);
         request.header("client_id", "ZitZlNvXgAzb");
         Response response = request.get();

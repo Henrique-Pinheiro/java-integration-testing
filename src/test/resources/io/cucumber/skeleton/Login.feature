@@ -23,7 +23,7 @@ Funcionalidade: API - Login
   @LoginConvivencia
     Exemplos:
       | EC         | user       | senha        | status | status_convivencia |
-      | 2006005264 | 2006095565 | s@2006095565 | 200    | true               |
+        | 2006005264 | 2006095565 | s@2006095565 | 200    | true               |
 
   @done
   Esquema do Cenário: Realizar Login invalido
