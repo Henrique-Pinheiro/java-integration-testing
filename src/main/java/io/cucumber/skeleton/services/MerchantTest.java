@@ -43,7 +43,7 @@ public class MerchantTest {
         json.prettyPrint();
         if(status == 200){
             nomeCompania = json.get("companyName");
-            ec = json.get("number");
+            ec = json.get("number").toString();
             cnpj = json.get("cnpj");
             nomeContato = json.get("contacts.name[3]");
             emails = json.get("contacts.emails[3]");

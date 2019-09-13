@@ -1,6 +1,6 @@
 #language: pt
 
-Funcionalidade: A API /merchant, Obtém os dados do usuario
+Funcionalidade: API /merchant, Obtém os dados do usuario
   http://apollo-core-ecscluster-hml-1454189126.sa-east-1.elb.amazonaws.com/api/apollo/user-information/v1/merchant
 
   @done
@@ -29,7 +29,7 @@ Funcionalidade: A API /merchant, Obtém os dados do usuario
       | ec         | user       | pass   | status |
       | 2000463023 | 2000463023 | 123456 | 401    |
 
-  @doing
+  @done
   Esquema do Cenário: Solicitação de dados com login invalido
     Dado que eu não esteja autenticado
     E eu envie a requisição
