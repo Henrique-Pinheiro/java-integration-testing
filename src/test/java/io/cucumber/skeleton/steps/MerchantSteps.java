@@ -26,7 +26,7 @@ public class MerchantSteps {
     @E("os dados do estabalecimento: nome da compania (.*), numero do ec (.*) e cnpj (.*) devem ser retornados")
     public void osDadosDoEstabalecimentoNomeDaCompaniaNome_companiaNumeroDoEcEcCnpjCnpjDevemSerRetornados(String nomeCompania, String ec, String cnpj) {
         Assert.assertEquals(nomeCompania, merchantTest.getNomeCompania());
-//        Assert.assertEquals(ec, merchantTest.getEc());
+        Assert.assertEquals(ec, merchantTest.getEc());
         Assert.assertEquals(cnpj, merchantTest.getCnpj());
 
     }

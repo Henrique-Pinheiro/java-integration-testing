@@ -16,11 +16,11 @@ public class MerchantTest {
     private int status;
     private String token = "";
     private String nomeCompania;
-    private String ec;
+    private String ec = "";
     private String cnpj;
     private String nomeContato;
-    private ArrayList<String> emails;
-    private String email;
+    private ArrayList<String> emails = new ArrayList<String>();
+    private String email = "";
     private String numeroTel;
     private String nomeRua;
     private String cep;
@@ -34,35 +34,37 @@ public class MerchantTest {
     public void getMerchant() {
         baseURI = ENDPOINT_GET_MERCHANT;
         RequestSpecification request = given();
-        token = invalidToken.isEmpty() ? LoginTest.getToken() : invalidToken+"a";
+        token = invalidToken.isEmpty() ? LoginTest.getToken() : invalidToken + "a";
         request.header("access_token", token);
         request.header("client_id", "ZitZlNvXgAzb");
         Response response = request.get();
         status = response.getStatusCode();
         JsonPath json = response.jsonPath();
-        nomeCompania = json.get("companyName");
-        ec = json.get("number").toString();
-        cnpj = json.get("cnpj");
-        nomeContato = json.get("contacts.name[0]");
-        emails = json.get("contacts.emails[0]");
-        email = emails.get(0);
-        numeroTel = json.get("contacts.phones[0].number[0]");
-        nomeRua = json.get("addresses.streetAddress[0]");
-        cep = json.get("addresses[0].zipCode");
-        cidade = json.get("addresses[0].city");
-        bairro = json.get("addresses[0].neighborhood");
-        estado = json.get("addresses[0].state");
-        numero = json.get("addresses[0].number");
+        json.prettyPrint();
+        if(status == 200){
+            nomeCompania = json.get("companyName");
+            ec = json.get("number");
+            cnpj = json.get("cnpj");
+            nomeContato = json.get("contacts.name[3]");
+            emails = json.get("contacts.emails[3]");
+            email = emails.get(0);
+            numeroTel = json.get("contacts.phones[0].number[0]");
+            nomeRua = json.get("addresses.streetAddress[0]");
+            cep = json.get("addresses[0].zipCode");
+            cidade = json.get("addresses[0].city");
+            bairro = json.get("addresses[0].neighborhood");
+            estado = json.get("addresses[0].state");
+            numero = json.get("addresses[0].number");
+        }
         msg = json.get("message");
-
     }
 
 
     public int getStatus() {
         return status;
     }
-    public String getMsg(){
 
+    public String getMsg() {
         return msg;
     }
 
@@ -113,6 +115,7 @@ public class MerchantTest {
     public String getNum() {
         return numero;
     }
+
     public void setInvalidToken(String invalidToken) {
         this.invalidToken = invalidToken;
     }

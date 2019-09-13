@@ -42,7 +42,7 @@ public class MeTest {
         email = json.get("email");
         dtAniversario = json.get("birthDate");
         cpf = json.get("identity.cpf");
-        ec = json.get("merchant.id");
+            ec = json.get("merchant.id");
         nomeEc = json.get("merchant.name");
         cnpj = json.get("merchant.cnpj.rootNumber");
         msg = json.get("message");

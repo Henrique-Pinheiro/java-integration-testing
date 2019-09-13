@@ -20,5 +20,3 @@ Funcionalidade: API - Eligibilidade do EC - Pagamento por Link
       | EC         | user       | senha     | status | elegivel |
       | 1005187565 | 1005187565 | cielo1234 | 200    | não      |
       | 2007700179 | 2007700179 | 654321    | 200    | não      |
-
-
