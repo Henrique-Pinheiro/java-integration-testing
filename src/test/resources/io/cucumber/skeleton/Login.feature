@@ -1,6 +1,6 @@
 #language: pt
 Funcionalidade: API - Login
-  Link para o Swagger: http://apollo-core-ecscluster-hml-1454189126.sa-east-1.elb.amazonaws.com/api/apollo/user-login/swagger-ui.html
+  Link para o Swagger:k http://apollo-core-ecscluster-hml-1454189126.sa-east-1.elb.amazonaws.com/api/apollo/user-login/swagger-ui.html
 
   @done
   Esquema do Cenário: Realizar Login com sucesso
